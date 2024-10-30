@@ -176,10 +176,10 @@
     width: 50px;
 }
 #nav_wrap .btn_toggle span:before{
-    top: 7px;
+    top: 10px;
 }
 #nav_wrap .btn_toggle span:after{
-    top: -7px;
+    top: -10px;
 }
 #nav_wrap .btn_toggle.on span{
     background-color: transparent;
