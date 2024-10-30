@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CATEGORY DESIGN</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/main_common.css">
+    <link rel="stylesheet" type="text/css" href="./css/layout.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css">
+
+    <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/header.js"></script>
+    <script type="text/javascript" src="./js/aside.js"></script>
+    <script type="text/javascript" src="./js/main_visual.js"></script>
+    <script type="text/javascript" src="./js/product_carousel.js"></script>
+    <script type="text/javascript" src="./js/quick_menu.js"></script>
+    <script type="text/javascript" src="./js/top_btn.js"></script>
+    <script type="text/javascript" src="./js/index_popup.js"></script>
+
+    <!--[if IE 9]>
+    <script type="text/javascript" src="./js/media.match.min.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--<![endif]-->
+
+</head>
+<body>
+
+
+<div id="wrap">
+<!--
+    <div class="layer-pop-wrap">
+        <div class="notice-popup">
+            <span>NOTICE</span>
+            <div class="notice-tit">
+                <p><strong>홍길동</strong>님의 쿠폰/적립금 현황</p>
+                <span>고객님의 쿠폰 및 적립금 내역을 알려드립니다.</span>
+            </div>
+            <div class="notice-cont">
+                <ul class="clearfix">
+                    <li class="float_l">쿠폰 <strong>2</strong>장</li>
+                    <li class="float_r"><a href="">쿠폰확인<i class="right-arrow"></i></a></li>
+                </ul>
+                <ul class="clearfix">
+                    <li class="float_l">적립금 <strong>2,000</strong>원</li>
+                    <li class="float_r"><a href="">적립금확인<i class="right-arrow"></i></a></li>
+                </ul>
+            </div>
+            <ul class="pop-btn clearfix">
+                <li><a href="javascript:;">오늘 하루 닫기</a></li>
+                <li><a href="javascript:;">닫기</a></li>
+            </ul>
+        </div>
+        <div class="index-popup">
+            <div class="pop-img">
+                <ul>
+                    <li><a href=""><img src="images/img_popup01.jpg" alt="신상품세일 팝업"></a></li>
+                    <li><a href=""><img src="images/img_popup02.jpg" alt="상품평이벤트 팝업"></a></li>
+                    <li><a href=""><img src="images/img_popup03.jpg" alt="휴무공지 팝업"></a></li>
+                </ul>
+            </div>
+            <div class="pop-menu">
+                <a href="" class="active"><b>신상품세일</b></a>
+                <a href=""><b>상품평이벤트</b></a>
+                <a href=""><b>휴무공지</b></a>
+            </div>
+            <ul class="pop-btn clearfix">
+                <li><a href="javascript:;">오늘 하루 닫기</a></li>
+                <li><a href="javascript:;">닫기</a></li>
+            </ul>
+        </div>
+    </div>
+-->
+    <!-- // popup -->
+    <!-- js -> index_popup.js -->
+
+    <!-- 상단 배너가 업로드 되지 않으면 보이지 않음-->
+    <div class="top-banner">
+        <div class="banner-area">
+            <img src="./images/top_banner_w.jpg" alt="banner" class="display-w">
+            <img src="./images/top_banner_m.jpg" alt="banner" class="display-m">
+        </div>
+        <button type="button" class="close"><img src="./images/btn_close.png" alt="close"></button>
+    </div>
+    <!-- // top-banner -->
+
+    <div class="side display-w">
+        <h1 class="logo">
+            <a href="#"><img src="images/logo.png" alt="로고이미지"></a>
+        </h1>
+
+        <div id="category" class="category">
+            <div class="inner">
+                <ul class="depth1">
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">BEST</a></li>
+                    <li><a href="#">FACE</a></li>
+                    <li><a href="#">EYE</a></li>
+                    <li><a href="#">CHECK</a></li>
+                    <li><a href="#">LIP</a>
+                        <ul class="depth2 hover-menu">
+                            <li><a href="#">LIPSTICK</a></li>
+                            <li><a href="#">LIQUID</a></li>
+                            <li><a href="#">TINT</a></li>
+                            <li><a href="#">LIP PENCIL</a></li>
+                            <li><a href="#">LIP CARE</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">NAIL</a></li>
+                    <li><a href="#">BOOY</a></li>
+                    <li><a href="#">TOOLS</a></li>
+                    <li><a href="#">SALE</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="search-area">
+            <div class="inner">
+                <input type="search" placeholder="검색어를 입력하세요.">
+                <button type="button">
+                    <i class="ico ico-search">검색</i>
+                </button>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="inner">
+                <ul class="depth1">
+                    <li><a href="#">NOTICE</a></li>
+                    <li><a href="#">EVENT</a></li>
+                    <li><a href="#">REVIEW</a></li>
+                    <li><a href="#">Q&A</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sns">
+            <div class="inner clearfix">
+                <ul>
+                    <li><i class="ico ico-kakao">카카오톡</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-facebook">페이스북</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-insta">인스타그램</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-kakaostory">카카오스토리</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-blog">네이버블로그</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-twitter">트위터</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-band">네이버밴드</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-youtube">유튜브</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="inner">
+                <div class="item">
+                    <h4>CUSTOMER SERVICE</h4>
+
+                    <p class="call"><a href="tel:1800-3772">1800-3772</a></p>
+
+                    <div class="mt15">
+                        <p>OPEN 9-18</p>
+
+                        <p>LUNCH 12-13</p>
+
+                        <p>Weekend,Holiday OFF</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>BANK ACCOUNT</h4>
+
+                    <div class="mt15">
+                        <p>국민 123333-07-255531</p>
+
+                        <p>농협 123-3330-7255-31</p>
+
+                        <p>(주)유디아이디</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // side display-w -->
+    <div class="header display-m">
+        <div class="inner">
+            <div class="menu-toggle float_l">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 class="logo">
+                <img src="images/logo.png" alt="로고이미지">
+            </h1>
+
+            <div class="btn-area float_r mt2">
+                <i class="ico ico-search" id="mserch">검색</i>
+            </div>
+        </div>
+        <div class="m-search">
+            <input type="search" placeholder="상품을 검색하세요.">
+            <button type="button">
+                <i class="ico ico-serach-sm">검색</i>
+            </button>
+        </div>
+        <div id="aside">
+            <div class="side-close">
+                <button type="button"><i class="ico ico-closelg">닫기</i></button>
+            </div>
+            <div class="side-menu">
+                <div class="login-area">
+                    <div class="login">
+                        <button type="button">LOGIN</button>
+                    </div>
+                    <div class="join">
+                        <button type="button">JOIN</button>
+                    </div>
+                </div>
+                <div class="tab-group">
+                    <div class="tab-content">
+                        <div class="accordion-container">
+                            <ul class="accordion">
+                                <li class="accordion-item">
+                                    <a class="accordion-thumb is-open">CATEGORY</a>
+                                    <ul class="accordion-panel">
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">NEW</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">BEST</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">FACE</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">EYE</a>
+                                            <ul class="accordion-panel-last">
+                                                <li>
+                                                    <a href="#">LIPSTICK</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">LIQUID</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">TINT</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">LIP PENCIL</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">LIP CARE</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">CHECK</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">LIP</a>
+                                            <ul class="accordion-panel-last">
+                                                <li>
+                                                    <a href="#">LIPSTICK</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">LIQUID</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">TINT</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">LIP PENCIL</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">LIP CARE</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">NAIL</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">BODY</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">TOOLS</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">SALE</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-thumb">COMMUNITY</a>
+                                    <ul class="accordion-panel display-none">
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">1:1문의</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">공지사항</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">상품문의</a>
+                                        </li>
+                                        <li class="accordion-item-last">
+                                            <a class="accordion-thumb-last" href="#">QNA</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // category1 -->
+                </div>
+                <div class="today-view-wrap">
+                    <h3>TODAY VIEW</h3>
+                    <!-- 오늘 본 상품이 있을 경우 -->
+                    <div class="today-arrow">
+                        <button type="button" title="이전" class="slick-prev">이전</button>
+                        <button type="button" title="다음" class="slick-next">다음</button>
+                    </div>
+                    <ul id="today-wrap">
+                        <li>
+                            <a href="#a"><img src="./images/pd_thumb02.jpg" alt="" class="thumb"></a>
+                        </li>
+                        <li>
+                            <a href="#a"><img src="./images/pd_thumb03.jpg" alt="" class="thumb"></a>
+                        </li>
+                        <li>
+                            <a href="#a"><img src="./images/pd_thumb04.jpg" alt="" class="thumb"></a>
+                        </li>
+                        <li>
+                            <a href="#a"><img src="./images/pd_thumb05.jpg" alt="" class="thumb"></a>
+                        </li>
+                    </ul>
+                    <!-- 오늘 본 상품이 없을 경우-->
+                    <!--  <p class="today-none">상품이 없습니다.</p>-->
+                </div>
+            </div>
+            <!-- // side-menu -->
+            <div class="aside-overlay"></div>
+            <div class="aside-overlay"></div>
+            <div class="aside-overlay"></div>
+            <div class="aside-overlay"></div>
+            <div class="aside-overlay"></div>
+            <div class="aside-overlay"></div>
+        </div>
+    </div>
+</div>
+<!-- // header display-m -->
+<!-- js -> header.js -->
+<!-- js -> aside.js -->
+
+<div class="login-area display-w">
+    <div>
+        <ul class="link-area float_r clearfix">
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+            <li><a href="#">CART(<span>99</span>)</a></li>
+            <li><a href="#">MYPAGE</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="container">
+
+    <div class="main-visual">
+        <ul id="visual-wide">
+            <li>
+                <a href="#a" class="display-w"><img src="./images/visual01_w.jpg" alt="visual1"></a>
+                <a href="#a" class="display-m"><img src="./images/visual01_m.jpg" alt="visual1"></a>
+            </li>
+            <li>
+                <a href="#a" class="display-w"><img src="images/visual02_w.jpg" alt="visual2"></a>
+                <a href="#a" class="display-m"><img src="images/visual02_m.jpg" alt="visual2"></a>
+            </li>
+        </ul>
+    </div>
+    <!-- // main-visual -->
+    <!-- js -> main_visual.js -->
+
+    <div class="product-carousel display-w">
+        <div class="inner">
+            <div class="sub-title">
+                <h2>best products</h2>
+
+                <p>블로그페이의 베스트 제품을 만나보세요.</p>
+            </div>
+            <ul>
+                <li class="item">
+                    <a href="#a">
+                        <div class="product-box"><img src="./images/best01.jpg" alt="best01"></div>
+                        <div class="time-count">
+                            <p>타임세일</p>
+                            <span class="date-count">898일 06:08:34</span>
+                        </div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a">
+                        <div class="product-box"><img src="./images/best02.jpg" alt="best02"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a">
+                        <div class="product-box"><img src="./images/best03.jpg" alt="best03"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a">
+                        <div class="product-box"><img src="./images/best04.jpg" alt="best04"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a">
+                        <div class="product-box"><img src="./images/best05.jpg" alt="best05"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a">
+                        <div class="product-box"><img src="./images/best06.jpg" alt="best06"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- // product-carousel display-w -->
+    <div class="product-carousel display-m">
+        <div class="inner">
+            <div class="sub-title">
+                <h2>best products</h2>
+                <p>블로그페이의 베스트 제품</p>
+            </div>
+            <ul id="product-carousel">
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div class="prod-img"><img src="./images/best01.jpg" alt="best01" class="thumb"></div>
+                        <div class="time-count">
+                            <p>타임세일</p>
+                            <span class="date-count">898일 06:08:34</span>
+                        </div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                            <div class="view"><span>view</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div class="prod-img"><img src="./images/best02.jpg" alt="best02" class="thumb"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                            <div class="view"><span>view</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div class="prod-img"><img src="./images/best03.jpg" alt="best03" class="thumb"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                            <div class="view"><span>view</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div class="prod-img"><img src="./images/best04.jpg" alt="best04" class="thumb"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                            <div class="view"><span>view</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div class="prod-img"><img src="./images/best05.jpg" alt="best05" class="thumb"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                            <div class="view"><span>view</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div class="prod-img"><img src="./images/best06.jpg" alt="best06" class="thumb"></div>
+                        <div class="segment">
+                            <div class="segment-text-wrap">
+                                <div class="title"><b>1+1 크림 싱글 아이섀도우</b></div>
+                                <div class="price"><span class="discount"><em>22,600</em>원</span><b>12,600원</b></div>
+                            </div>
+                            <div class="view"><span>view</span></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- // product-carousel display-m -->
+    <!-- // product-carousel -->
+    <!-- js -> product_carousel.js -->
+
+    <div class="banner-visual display-m"><a href="#a"><img src="./images/visual03_m.jpg" alt="banner"></a></div>
+    <!-- // banner-visual display-m -->
+
+    <div class="product-list">
+        <div class="inner">
+            <div class="sub-title display-w">
+                <h2>new arrival</h2>
+
+                <p>매일 출시되는 신제품을 만나보세요.</p>
+            </div>
+            <div class="sub-title display-m">
+                <h2>new arrival</h2>
+
+                <p>블로그페이 신상아이템</p>
+            </div>
+            <div class="banner-visual display-w"><a href="#a"><img src="./images/visual03_w.jpg" alt="banner"></a></div>
+            <ul>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div href="#a" class="prod-img">
+                            <img src="./images/pd_thumb01.jpg" alt="product01" class="thumb">
+                            <span class="prod-state sold-out"></span><!-- 상품이 품절된 경우 img 태그에 prod-state sold-out 클래스 추가 -->
+                        </div>
+                        <div class="info-area">
+                            <div class="label">
+                                <span class="coupon">쿠폰</span>
+                                <span class="delivery">묶음배송</span>
+                            </div>
+                            <dl>
+                                <dt>
+                                <p><strong class="title">슈퍼 딥 클렌징폼</strong></p></dt>
+                                <dd class="price-info">
+                                    <div class="price"><span class="discount"><em>19,800</em>원</span></div>
+                                    <div class="sale"><b><span class="discount-red">할인판매가 : 9,800원</span><em
+                                                class="discount-gray">(50% 할인)</em></b></div>
+                                </dd>
+                                <dd class="info">진한 포인트 메이크업은 무론 워터프루프 메이크업까지 답답함 없이 산뜻 깔끔하게 클렌징해줘요!</dd>
+                            </dl>
+                            <div class="tags clearfix"><img src="./images/label_new.png" alt="NEW"><img
+                                    src="./images/label_sale.png" alt="SALE"><img src="./images/label_hot.png"
+                                                                                  alt="HOT"></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div href="#a" class="prod-img"><img src="./images/pd_thumb02.jpg" alt="product02"
+                                                             class="thumb"></div>
+                        <div class="info-area">
+                            <div class="label hidden">
+                                <span class="coupon">쿠폰</span>
+                                <span class="delivery">묶음배송</span>
+                            </div>
+                            <dl>
+                                <dt>
+                                    <p><strong class="title">가볍게 말리고 쉽게 흡수되는 데일리 오가닉 페이셜 잡티세럼</strong></p>
+                                </dt>
+                                <dd class="price-info">
+                                    <div class="price"><span class="discount"><em>79,000</em>원</span></div>
+                                    <div class="sale"><b><span>62,900원</span></b></div>
+                                </dd>
+                                <dd class="info">가볍게 발리고 쉽게 흡수되어 여름철 무거운 제형의 크림이 부담스러운 분들에게 이상적인 데일리 아이템!</dd>
+                            </dl>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div href="#a" class="prod-img"><img src="./images/pd_thumb03.jpg" alt="product03"
+                                                             class="thumb"></div>
+                        <div class="info-area">
+                            <div class="label">
+                                <span class="coupon display-none">쿠폰</span>
+                                <span class="delivery">묶음배송</span>
+                            </div>
+                            <dl>
+                                <dt>
+                                <p><strong class="title">은은한 장미향을 담은 바디로션</strong></p></dt>
+                                <dd class="price-info">
+                                    <div class="price"><span class="discount"><em>80,000</em>원</span></div>
+                                    <div class="sale"><b><span class="discount-red">할인판매가 : 59,900원</span><em>(25%
+                                                할인)</em></b></div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div href="#a" class="prod-img"><img src="./images/pd_thumb04.jpg" alt="product04"
+                                                             class="thumb"></div>
+                        <div class="info-area">
+                            <div class="label">
+                                <span class="coupon">쿠폰</span>
+                                <span class="delivery display-none">묶음배송</span>
+                            </div>
+                            <dl>
+                                <dt>
+                                <p><strong class="title">촉촉한 코코넛 바디오일</strong></p></dt>
+                                <dd class="price-info">
+                                    <div class="sale"><b><span>12,500원</span></b></div>
+                                </dd>
+                                <dd class="info">코코넛 오일성분으로 건조한 겨울철 촉촉하게 관리해요~</dd>
+                            </dl>
+                            <div class="tags"><img src="./images/label_sale.png" alt="SALE"></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div href="#a" class="prod-img"><img src="./images/pd_thumb05.jpg" alt="product05"
+                                                             class="thumb"></div>
+                        <div class="info-area">
+                            <div class="label">
+                                <span class="coupon">쿠폰</span>
+                                <span class="delivery">묶음배송</span>
+                            </div>
+                            <dl>
+                                <dt>
+                                <p><strong class="title">블러썸 섬유향수 300ml</strong></p></dt>
+                                <dd class="price-info">
+                                    <div class="price"><span class="discount"><em>12,900</em>원</span></div>
+                                    <div class="sale"><b><span class="discount-red">할인판매가 : 9,930원</span><em
+                                                class="discount-gray">(23% 할인)</em></b></div>
+                                </dd>
+                                <dd class="info">방금 빨래를 마친듯 뽀송 뽀송하게~</dd>
+                            </dl>
+                            <div class="tags clearfix"><img src="./images/label_new.png" alt="NEW"><img
+                                    src="./images/label_sale.png" alt="SALE"><img src="./images/label_hot.png"
+                                                                                  alt="HOT"></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div href="#a" class="prod-img">
+                            <img src="./images/pd_thumb06.jpg" alt="product06" class="thumb">
+                            <div class="time-count">
+                                <p>타임세일</p>
+                                <span class="date-count">898일 06:08:34</span>
+                            </div>
+                        </div>
+                        <div class="info-area">
+                            <div class="label hidden">
+                                <span class="coupon">쿠폰</span>
+                                <span class="delivery">묶음배송</span>
+                            </div>
+                            <dl>
+                                <dt>
+                                    <p><strong class="title">탄력받아 건강하고 촉촉한 피부를 완성하는 힐링 포스트 2종 세트</strong></p>
+                                </dt>
+                                <dd class="price-info">
+                                    <div class="price"><span class="discount"><em>52,000</em>원</span></div>
+                                    <div class="sale"><b><span>41,600원</span></b></div>
+                                </dd>
+                                <dd class="info">피부에 닿자마자 퍼지는 수분감으로 끈적이지 않고도 피부 깊숙이 수분감을 채워드려요!!</dd>
+                            </dl>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div href="#a" class="prod-img"><img src="./images/pd_thumb07.jpg" alt="product07"
+                                                             class="thumb"></div>
+                        <div class="info-area">
+                            <div class="label">
+                                <span class="coupon display-none">쿠폰</span>
+                                <span class="delivery">묶음배송</span>
+                            </div>
+                            <dl>
+                                <dt>
+                                <p><strong class="title">내 피부절친 스팟세럼</strong></p></dt>
+                                <dd class="price-info">
+                                    <div class="price"><span class="discount"><em>32,000</em>원</span></div>
+                                    <div class="sale"><b><span class="discount-red">할인판매가 : 25,600원</span><em>(20%
+                                                할인)</em></b></div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#a" class="product-box">
+                        <div href="#a" class="prod-img">
+                            <div class="no-image">
+                                <img src="./images/no_image.png" alt="no image">
+                            </div>
+                        </div>
+                        <div class="info-area">
+                            <div class="label">
+                                <span class="coupon">쿠폰</span>
+                                <span class="delivery display-none">묶음배송</span>
+                            </div>
+                            <dl>
+                                <dt>
+                                <p><strong class="title">약산성 클렌징 버블폼</strong></p></dt>
+                                <dd class="price-info">
+                                    <div class="sale"><b><span>12,500원</span></b></div>
+                                </dd>
+                                <dd class="info">착한 성분은 담고 피부에 불필요한 성분은 뻇어요~</dd>
+                            </dl>
+                            <div class="tags"><img src="./images/label_hot.png" alt="HOT"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="btn-wrap center">
+                <button type="button" class="btn btn-more"><span>More view</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- // product-list -->
+
+</div>
+<!-- // container -->
+
+<div class="footer">
+    <div>
+        <div class="about display-m">
+            <div class="inner">
+                <div class="item">
+                    <h4>CUSTOMER SERVICE</h4>
+
+                    <p class="call"><a href="tel:1800-3772">1800-3772</a></p>
+
+                    <div class="mt10">
+                        <p>AM 9:00 - PM 6:00 MON-FRI</p>
+
+                        <p>LUNCH PM 12:00 - 1:00</p>
+
+                        <p class="mt5">HOLIDAY OFF</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>BANK ACCOUNT</h4>
+
+                    <p>국민 123333-07-255531</p>
+
+                    <p>농협 123-3330-7255-31</p>
+
+                    <p class="mt15">(주)유디아이디</p>
+                </div>
+            </div>
+        </div>
+        <div class="top-menu">
+            <div class="inner clearfix">
+                <ul class="quick float_l">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보 취급방침</a></li>
+                </ul>
+                <ul class="sns float_r display-m">
+                    <li><i class="ico ico-kakao">카카오톡</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-facebook">페이스북</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-insta">인스타그램</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-kakaostory">카카오스토리</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-blog">네이버블로그</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-twitter">트위터</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-band">네이버밴드</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                    <li><i class="ico ico-youtube">유튜브</i>
+                        <div class="sns-tooltip white">
+                            <a href="#a">이동하기</a>
+                            <a href="#a">공유하기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="company-info">
+            <div class="inner">
+                <div class="info display-w">
+                    <dl>
+                        <dt>COMPANY</dt>
+                        <dd>(주)유디아이디</dd>
+                        <dt class="line">OWNER</dt>
+                        <dd>김재인</dd>
+                        <dt>BUSINESS LICENSE</dt>
+                        <dd>113-86-56537 <a href="#">[사업자정보확인]</a></dd>
+                        <dt>ONLINE BUSINESS LICENSE</dt>
+                        <dd>제2012-서울구로-0239호</dd>
+                    </dl>
+                    <dl>
+                        <dt>ADDRESS</dt>
+                        <dd>서울 구로구 디지털로26길 61 (구로동,에이스하이엔드타워 2차) 1202호</dd>
+                        <dt>CALL CENTER</dt>
+                        <dd><a href="tel:1800-3772">1800-3772</a></dd>
+                        <dt class="line">E-MAIL</dt>
+                        <dd>UDID@udid.co.kr</dd>
+                    </dl>
+                    <p>(C) UDID, ALL RIGHTS RESERVED. HOSTING BY BLOGPAY.</p>
+                </div>
+                <div class="info display-m">
+                    <dl>
+                        <dt>COMPANY</dt>
+                        <dd>(주)유디아이디</dd>
+                    </dl>
+                    <dl>
+                        <dt>OWNER</dt>
+                        <dd>김재인</dd>
+                    </dl>
+                    <dl>
+                        <dt>BUSINESS LICENSE</dt>
+                        <dd>113-86-56537 <a href="#">[사업자정보확인]</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>ONLINE BUSINESS LICENSE</dt>
+                        <dd>제2012-서울구로-0239호</dd>
+                    </dl>
+                    <dl>
+                        <dt>ADDRESS</dt>
+                        <dd>서울 구로구 디지털로26길 61 (구로동,에이스하이엔드타워 2차) 1202호</dd>
+                    </dl>
+                    <dl>
+                        <dt>CALL CENTER</dt>
+                        <dd><a href="tel:1800-3772">1800-3772</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>E-MAIL</dt>
+                        <dd>UDID@udid.co.kr</dd>
+                    </dl>
+                    <p>(C) UDID, ALL RIGHTS RESERVED. HOSTING BY BLOGPAY.</p>
+                </div>
+                <div class="escro clearfix">
+                    <i class="ico ico-escro float_l">에스크로</i>
+
+                    <p>고객님은 안전거래를 위해 현금등으로 결제시<br class="display-m"> 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다.<br><a
+                            href="#">[에스크로 가입사실 확인]</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="quick-menu">
+    <div class="menu-btn">
+        <button type="button" data-menu="today" class="display-w"><i class="ico ico-today">오늘 본 상품</i></button>
+        <button type="button" class="go-btn go-top"><i class="ico ico-up">페이지 상단으로</i></button>
+        <button type="button" class="go-btn go-btm display-w"><i class="ico ico-down">페이지 하단으로</i></button>
+    </div>
+    <div class="menu-cont" id="today">
+        <h3>최근 본 상품</h3>
+        <!-- 오늘 본 상품이 있을 경우 -->
+        <ul class="today-view">
+            <li class="item">
+                <a href="#a" class="prod-img"><img src="./images/pd_thumb01.jpg" alt="" class="thumb"></a>
+            </li>
+            <li class="item">
+                <a href="#a" class="prod-img"><img src="./images/pd_thumb02.jpg" alt="" class="thumb"></a>
+            </li>
+            <li class="item">
+                <a href="#a" class="prod-img"><img src="./images/pd_thumb03.jpg" alt="" class="thumb"></a>
+            </li>
+            <li class="item">
+                <a href="#a" class="prod-img"><img src="./images/pd_thumb04.jpg" alt="" class="thumb"></a>
+            </li>
+            <li class="item">
+                <a href="#a" class="prod-img"><img src="./images/pd_thumb01.jpg" alt="" class="thumb"></a>
+            </li>
+            <li class="item">
+                <a href="#a" class="prod-img"><img src="./images/pd_thumb02.jpg" alt="" class="thumb"></a>
+            </li>
+            <li class="item">
+                <a href="#a" class="prod-img"><img src="./images/pd_thumb03.jpg" alt="" class="thumb"></a>
+            </li>
+            <li class="item">
+                <a href="#a" class="prod-img"><img src="./images/pd_thumb04.jpg" alt="" class="thumb"></a>
+            </li>
+        </ul>
+        <!-- 오늘 본 상품이 없을 경우-->
+        <!--<p class="today-none">상품이 없습니다.</p>-->
+    </div>
+    <div class="quick-banner">
+        <a href="#a" class="kakao">카카오톡 상담하기</a>
+    </div>
+</div>
+<!-- // quick-menu -->
+<!-- js -> quick_menu.js -->
+<!-- js -> top_btn.js -->
+
+</body>
+</html>
+

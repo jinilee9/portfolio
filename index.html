@@ -1,0 +1,658 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="description" content="personal_portfolio">
+    <meta name="keywords" content="alice,portfolio,personal,graphic,designer">
+    <meta name="author" content="JinHeeLee">
+    <title>JinHeeLee - Portfolio</title>
+    <link rel="stylesheet" href="asset/css/reset.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="icon" href="asset/img/intro/key.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Sora:wght@300;600&display=swap" rel="stylesheet">
+    <script src="asset/libs/jquery-1.10.2.min.js"></script>
+    <script src="asset/libs/respond.min.js"></script>
+    <script src="asset/libs/jquery.easing.js"></script>
+    <script src="asset/libs/jquery.nicescroll.min.js"></script>
+    <script src="asset/js/common.js"></script>
+<!--
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $(window).load(function () {
+                setTimeout(intro, 500);
+            })
+        });
+    </script>
+-->
+</head>
+
+<body onselect="false" ondrag="false">
+    <!-- <div id="intro">
+        <div class="objs">
+            <div class="door">
+                <a href="#"> <img src="asset/img/intro/door.png" alt="door" class="original"> <img src="asset/img/intro/door_blur.png" alt="door" class="blur"> </a>
+            </div>
+            <div class="txt-t2">
+                <p class="t2"> <img src="asset/img/intro/text2.png" alt="txt2"> </p>
+            </div>
+            <div class="txt-t1">
+                <p class="t1"> <img src="asset/img/intro/text1.png" alt="txt1" class="original"> <img src="asset/img/intro/text1_blur.png" alt="txt1" class="blur"> </p>
+            </div>
+        </div>
+    </div>
+       //intro END       -->
+    <div id="nav_wrap">
+        <button class="btn_toggle"><span>메뉴</span></button>
+        <div id="nav">
+            <ul class="nav_menu">
+                <li> <a href="#" class="nav-link">About</a>
+                    <div class="nav_contents">
+                        <ul id="nav_about">
+                            <h3><img src="asset/img/nav/nav_aboutBG_title.png" alt="aboutBG"></h3>
+                            <li>Hi, I'm JinHee Lee, a designer. </li>
+                            <li>I like to design and code user-friendly websites.</li>
+                            <li>My Skills
+                                <ol>
+                                    <li>photoshop</li>
+                                    <li>illustrator</li>
+                                    <li>dreamweaver</li>
+                                    <li>HTML/CSS</li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn_close"><span>닫기</span></button>
+                    </div>
+                </li>
+                <li> <a href="#" class="nav-link">Projects</a>
+                    <div class="nav_contents">
+                        <div id="gridywrap" style="height: 100%; overflow: auto">
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list20.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>design skin</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">web design</p>
+                                        <p class="gridwho">쇼핑몰 반응형스킨</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf20')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list21.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>design skin</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">web design</p>
+                                        <p class="gridwho">쇼핑몰 반응형스킨</p>
+                                    </div>
+                                   <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf21')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>                               
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list22.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>event page</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">eventpage design</p>
+                                        <p class="gridwho">이벤트페이지</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf22')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list5.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>personal site</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">web design</p>
+                                        <p class="gridwho">개인 웹사이트</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf5')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list6.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>life in korea</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">ucc design</p>
+                                        <p class="gridwho">영상 공모전 출품작</p>
+                                    </div>
+                                    <p class="gridxerpt">UCC Design Award</p> <a href="javascript:portfolioIframe.open('pf6')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list7.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>bombay sapphire</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">package design</p>
+                                        <p class="gridwho">공모전 출품작</p>
+                                    </div>
+                                    <p class="gridxerpt">Limited Edition Package Design Award</p> <a href="javascript:portfolioIframe.open('pf7')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list8.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>verace cookies</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">package design</p>
+                                        <p class="gridwho">공모전 출품작</p>
+                                    </div>
+                                    <p class="gridxerpt">Verace Canvas Design Award</p> <a href="javascript:portfolioIframe.open('pf8')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list9.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>caffebene cup art</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">package design</p>
+                                        <p class="gridwho">공모전 출품작</p>
+                                    </div>
+                                    <p class="gridxerpt">Caffebene Cup Design Award</p> <a href="javascript:portfolioIframe.open('pf9')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list10.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>tree,eco and kiehl's</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">package design</p>
+                                        <p class="gridwho">공모전 출품작</p>
+                                    </div>
+                                    <p class="gridxerpt">KIEHL'S Label Design Award</p> <a href="javascript:portfolioIframe.open('pf10')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list12.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>jangpung</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">brand identity design</p>
+                                        <p class="gridwho">양대창구이 장풍 청담점</p>
+                                        
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf12')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list13.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>magshop fashion</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">detail page design</p>
+                                        <p class="gridwho">패션잡화 온라인쇼핑몰</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf13')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list14.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>ast</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">editorial design</p>
+                                        <p class="gridwho">매뉴얼 다국어편집</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf14')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list15.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>mad place</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">detail page design</p>
+                                        <p class="gridwho">중국 온라인쇼핑몰</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf15')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list16.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>book cover</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">visual design</p>
+                                        <p class="gridwho">&#40;개인작업&#41; 북커버</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf16')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list17.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>poster</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">visual design</p>
+                                        <p class="gridwho">&#40;개인작업&#41; 포스터</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf17')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list18.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>leaflet</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">visual design</p>
+                                        <p class="gridwho">&#40;개인작업&#41; 리플렛</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf18')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                            <div class="gridy">
+                                <div class="gridimg" style="background-image: url(asset/img/nav/list/list19.jpg)">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>detail page</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">detail page design</p>
+                                        <p class="gridwho">&#40;개인작업&#41; 상세페이지</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="javascript:portfolioIframe.open('pf19')" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>                         
+                            <div class="gridy">
+                                <div class="gridimg" style="background-color: lightgray">&nbsp;</div>
+                                <div class="gridinfo">
+                                    <h3>no title</h3>
+                                    <div class="gridmeta">
+                                        <p class="gridwhen">No explanation</p>
+                                        <p class="gridwho">No explanation</p>
+                                    </div>
+                                    <p class="gridxerpt"></p> <a href="#" class="grid-btn grid-more"><span>more</span><i class="plus_icon"></i></a> </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_close"><span>닫기</span></button>
+                    </div>
+                </li>
+                <li> <a href="#" class="nav-link">Contact</a>
+                    <div class="nav_contents">
+                        <ul id="nav_contact">
+                            <h3><img src="asset/img/nav/nav_contactBG_title.png" alt="contactBG"></h3>
+                            <li>Name: Jin Hee Lee</li>
+                            <li>Email: ggum920@naver.com</li>
+                            <li>Blog: ggum920.blog.me</li>
+                            <li>Instagram: JINILE</li>
+                        </ul>
+                        <button type="button" class="btn_close"><span>닫기</span></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- //nav -->
+    </div>
+    <!-- //nav_wrap -->
+    <div class="scrollbox">
+        <div id="root">
+            <div id="header" class="index_top relative">
+                <h1 id="header_title">
+                    <span><img src="asset/img/main/header_title.png" alt="header_title"></span>
+                </h1>
+              <p id="description"><!--안녕하세요. 이진희 포트폴리오 웹사이트 입니다.
+                  <br>스크롤하시면 더 많은작품을 보실 수 있습니다. 감사합니다.  -->Welcome to my personal website.
+                   <br>You can see more about my projects by scrolling. </p>
+                <div class="icon_scroll"> 
+                    <span class="arrowdown"></span>
+                    <p>SCROLL DOWN</p>
+                </div>                    
+            </div> 
+            <!-- //header end -->
+            <div id="content">
+                <div class="projects">
+                    <div class="item right relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf20')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over1.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over1.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">WebSite</span> </p>
+                            <h3 class="project_name">쇼핑몰 반응형스킨</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Design<br>Skin</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf20')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    	<!--//item right relative END-->
+                   <div class="item left relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf21')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over2.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over2.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">WebSite</span> </p>
+                            <h3 class="project_name">쇼핑몰 반응형스킨</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Design<br>Skin</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf21')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    	<!-- //item left relative END-->
+                    <div class="item right relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf22')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over3.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over3.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">visual Design</span> </p>
+                            <h3 class="project_name">이벤트 페이지</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">EventPage</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf22')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    	<!--//item right relative END-->
+                    <div class="item left relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf5')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over5.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over5.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">WebSite</span> </p>
+                            <h3 class="project_name">개인 웹사이트</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Personal<br>Site</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf5')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf6')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over6.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over6.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">ucc design</span> </p>
+                            <h3 class="project_name">영상 공모전 출품작</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">LifeInKorea</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf6')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf7')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over7.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over7.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">package design</span> </p>
+                            <h3 class="project_name">공모전 출품작</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Bombay<br>Sapphire</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf7')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf8')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over8.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over8.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">package design</span> </p>
+                            <h3 class="project_name">공모전 출품작</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Verace<br>Cookies</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf8')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf9')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over9.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over9.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">package design</span> </p>
+                            <h3 class="project_name">공모전 출품작</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Caffebene<br>CupArt</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf9')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf10')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over10.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over10.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">package design</span> </p>
+                            <h3 class="project_name">공모전 출품작</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Tree,Eco<br>And Kiehl's</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf10')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf12')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over12.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over12.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">BRAND IDENTITY Design</span> </p>
+                            <h3 class="project_name">양대창구이전문점</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">JangPung</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf12')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf13')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over13.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over13.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">DETAIL PAGE Design</span> </p>
+                            <h3 class="project_name">패션잡화쇼핑몰</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">MAGShop</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf13')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf14')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over14.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over14.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">EDITORIAL Design</span> </p>
+                            <h3 class="project_name">매뉴얼디자인</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">AST</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf14')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf15')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over15.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over15.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">DETAIL PAGE Design</span> </p>
+                            <h3 class="project_name">중국온라인쇼핑몰</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">MADPlace</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf15')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf16')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over16.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over16.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">visual Design</span> </p>
+                            <h3 class="project_name">&#40;개인작업&#41; 북커버</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">BookCover</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf16')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf17')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over17.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over17.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">visual Design</span> </p>
+                            <h3 class="project_name">&#40;개인작업&#41; 포스터</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Poster</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf17')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf18')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over18.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over18.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">visual Design</span> </p>
+                            <h3 class="project_name">&#40;개인작업&#41; 리플렛</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">Leaflet </span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf18')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="javascript:portfolioIframe.open('pf19')" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail1" data-over="thumbnail_over" src="asset/img/main/card_over19.png" alt="card_over"> <img class="reveal" data-reveal="thumbnail2" data-over="thumbnail_over" src="asset/img/main/card_over19.png" alt="card_over"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">visual Design</span> </p>
+                            <h3 class="project_name">&#40;개인작업&#41; 상세페이지</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">DetailPage</span> </p>
+                            <p class="project_view absolute">
+                                <a href="javascript:portfolioIframe.open('pf19')" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="#" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">no title</span> </p>
+                            <h3 class="project_name">무제</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">NoTitle</span> </p>
+                            <p class="project_view absolute">
+                                <a href="#" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="#" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">no title</span> </p>
+                            <h3 class="project_name">무제</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">NoTitle</span> </p>
+                            <p class="project_view absolute">
+                                <a href="#" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative ">
+                        <div class="project_thumbnail absolute">
+                            <a href="#" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">no title</span> </p>
+                            <h3 class="project_name">무제</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">NoTitle</span> </p>
+                            <p class="project_view absolute">
+                                <a href="#" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                    <div class="item right relative">
+                        <div class="project_thumbnail absolute">
+                            <a href="#" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> </a>
+                        </div>
+                        <div class="project_content">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">no title</span> </p>
+                            <h3 class="project_name">무제</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">NoTitle</span> </p>
+                            <p class="project_view absolute">
+                                <a href="#" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item right relative END-->
+                    <div class="item left relative" style="margin-bottom: 320px">
+                        <div class="project_thumbnail absolute">
+                            <a href="#" class="btn_detail"> <img class="reveal" data-reveal="thumbnail1" src="asset/img/main/card_back.png" alt="card_back"> <img class="reveal" data-reveal="thumbnail2" src="asset/img/main/card_back.png" alt="card_back"> </a>
+                        </div>
+                        <div class="project_content reveal">
+                            <p class="project_created"> <span class="project_created_line project-created_line-first"></span> <span class="project_created_line project-created_line-second"></span> <span class="project_created_line project-created_line-third"></span> <span class="project_created_label">no title</span> </p>
+                            <h3 class="project_name">무제</h3>
+                            <p class="project_title relative"> <span class="project_title_label absolute">NoTitle</span> </p>
+                            <p class="project_view absolute">
+                                <a href="#" class="btn_detail"><img src="asset/img/main/arrow.png" alt="detail"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--	//item left relative END-->
+                </div>
+                <!--  //projects END  -->
+                <div id="objs_container">
+                    <ul class="obj_things">
+                        <li class="thing1" data-top="50"><img src="asset/img/main/objs/book2_blur.png" alt="obj_thing"></li>
+                        <li class="thing2" data-top="90"><img src="asset/img/main/objs/clock_blur.png" alt="obj_thing"></li>
+                        <li class="thing3" data-top="110"><img src="asset/img/main/objs/frame1.png" alt="obj_thing"></li>
+                        <li class="thing4" data-top="210"><img src="asset/img/main/objs/teapot.png" alt="obj_thing"></li>
+                        <li class="thing5" data-top="180"><img src="asset/img/main/objs/table1.png" alt="obj_thing"></li>
+                        <li class="thing6" data-top="60"><img src="asset/img/main/objs/wing_clock.png" alt="obj_thing"></li>
+                        <li class="thing7" data-top="130"><img src="asset/img/main/objs/chair.png" alt="obj_thing"></li>
+                        <li class="thing8" data-top="100"><img src="asset/img/main/objs/book1.png" alt="obj_thing"></li>
+                        <li class="thing9" data-top="40"><img src="asset/img/main/objs/letter.png" alt="obj_thing"></li>
+                        <li class="thing10" data-top="100"><img src="asset/img/main/objs/frame.png" alt="obj_thing"></li>
+                        <li class="thing11" data-top="100"><img src="asset/img/main/objs/chair1.png" alt="obj_thing"></li>
+                        <li class="thing12" data-top="200"><img src="asset/img/main/objs/clock2.png" alt="obj_thing"></li>
+                        <li class="thing13" data-top="120"><img src="asset/img/main/objs/light.png" alt="obj_thing"></li>
+                        <li class="thing14" data-top="150"><img src="asset/img/main/objs/wing_book.png" alt="obj_thing"></li>
+                        <li class="thing15" data-top="90"><img src="asset/img/main/objs/book.png" alt="obj_thing"></li>
+                        <li class="thing16" data-top="160"><img src="asset/img/main/objs/letter1.png" alt="obj_thing"></li>
+                        <li class="thing17" data-top="130"><img src="asset/img/main/objs/clock1.png" alt="obj_thing"></li>
+                        <li class="thing18" data-top="80"><img src="asset/img/main/objs/table.png" alt="obj_thing"></li>
+                    </ul>
+                    <ul class="obj_cards">
+                        <li class="card0" data-top="0.01"><img src="asset/img/main/objs/card0.png" alt="obj_card"></li>
+                        <li class="card1" data-top="0.003"><img src="asset/img/main/objs/card1.png" alt="obj_card"></li>
+                        <li class="card2" data-top="0.004"><img src="asset/img/main/objs/card2.png" alt="obj_card"></li>
+                        <li class="card3" data-top="0.012"><img src="asset/img/main/objs/card3.png" alt="obj_card"></li>
+                        <li class="card4" data-top="0.008"><img src="asset/img/main/objs/card4.png" alt="obj_card"></li>
+                        <li class="card5" data-top="0.002"><img src="asset/img/main/objs/card5.png" alt="obj_card"></li>
+                        <li class="card6" data-top="0.005"><img src="asset/img/main/objs/card6.png" alt="obj_card"></li>
+                        <li class="card7" data-top="0.015"><img src="asset/img/main/objs/card7.png" alt="obj_card"></li>
+                        <li class="card8" data-top="0.005"><img src="asset/img/main/objs/card8.png" alt="obj_card"></li>
+                        <li class="card9" data-top="0.012"><img src="asset/img/main/objs/card9.png" alt="obj_card"></li>
+                        <li class="card10" data-top="0.09"><img src="asset/img/main/objs/card10.png" alt="obj_card"></li>
+                        <li class="card11" data-top="0.01"><img src="asset/img/main/objs/card11.png" alt="obj_card"></li>
+                        <li class="card12" data-top="0.07"><img src="asset/img/main/objs/card12.png" alt="obj_card"></li>
+                        <li class="card13" data-top="0.04"><img src="asset/img/main/objs/card13.png" alt="obj_card"></li>
+                        <li class="card14" data-top="0.011"><img src="asset/img/main/objs/card14.png" alt="obj_card"></li>
+                        <li class="card15" data-top="0.01"><img src="asset/img/main/objs/card15.png" alt="obj_card"></li>
+                    </ul>
+                </div>
+                <div id="mask_container">
+                    <div id="mask_opacity"></div>
+                    <div id="mask_gradation"></div>
+                </div>
+                <!-- //mask_container end  -->
+            </div>
+            <!--  //content END  -->
+        </div>
+        <!--     //root END       -->
+    </div>
+    <!--     //scrollbox END       -->
+    <div id="popIframe" class="close">
+        <iframe class="frame" src="./portfolio/pf1.html" frameborder="0"></iframe>
+        <button type="button" class="btn_close" onclick="portfolioIframe.close()"><span>닫기</span></button>
+    </div>
+</body>
+
+</html>
