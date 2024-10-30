@@ -157,7 +157,7 @@
     left: 0;
     top: 50%;
     margin: -1px 0 0 0;
-    width: 26px;
+    width: 50px;
     height: 2px;
     text-indent: -9999px;
     background-color: #fff; 
@@ -173,7 +173,7 @@
     color: #505050;
     transform-origin: 50% 50%;
     transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-    width: 26px;
+    width: 50px;
 }
 #nav_wrap .btn_toggle span:before{
     top: 7px;
