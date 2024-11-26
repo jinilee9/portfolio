@@ -1,53 +1,51 @@
 <!DOCTYPE html>
-<html lang="ko" class="pop">
+<html lang="ko-KR" class="pop">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-<meta name="description" content="personal_portfolio">
-<meta name="keywords" content="alice,portfolio,personal,graphic,designer">
-<meta name="author" content="JinHeeLee">
-<title>JinHeeLee - Portfolio</title>
-<link rel="stylesheet" href="../asset/css/reset.css">
-<link rel="stylesheet" href="../asset/css/pf.css">
-<link rel="icon" href="../asset/img/intro/key.png">
- <script type="text/javascript">
- window.history.forward();
- function noBack(){window.history.forward();}
-</script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="description" content="personal_portfolio">
+    <meta name="keywords" content="portfolio,personal,graphic,web,designer,publisher">
+    <meta name="author" content="JinHeeLee">
+    <title>JinHeeLee - Portfolio</title>
+    <link rel="stylesheet" href="../asset/css/reset.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="icon" href="asset/img/key.png">
 </head>
-<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
-<div id="wrap">
-    <ul id="main">
-        <li class="txt">    
-           <ul>      
-                <li><span class="upper">PACKAGE</span>&nbsp;Design</li>
-                <li><img src="../asset/img/pf/pf_top_txtline.png" alt=""></li>
-                <li class="upper">TREE, ECO AND KIEHL’S</li>
-                <span>KIEHL'S Label Design Award</span>
-                <li class="pt9">키엘 수분크림<br>디자인 공모전 출품작</li>
-            </ul>
-        </li>
-        <li class="frame"><img src="../asset/img/pf/pf_frame_pkg4.png" alt=""></li>
-        <li class="obj"><img src="../asset/img/pf/pf_top_obj.png" alt=""></li>       
-    </ul>
-    <div id="content">
-        <ul>
-            <li><img src="../asset/img/pf/pf_num1_web.png" alt=""></li>
-            <li>인간과 자연은 하나임을 표현하기 위해 사람 얼굴을 자연의 일부분인 나무로 변형시키고 나뭇잎을 형상화하기 위해 머리카락은 초록색으로 
-표현하였다. <br>제품을 사용할때마다 많은 사람들이 나무를 포함한 모든 자연을 다시한번 생각하고 지키고자 하는 마음이 생겨나길 바란다.</li>            
-        </ul>
-        <ul>
-            <li><img src="../asset/img/pf/pf_num2_pkg1.png" alt=""></li>
-            <li><img src="../asset/img/pf/pf_sub_pkg4.png" alt=""></li>
-        </ul>
-    </div>
-</div>
+
+<body>
+    <section class="pf">
+        <div class="pf__inner">
+            <h2 class="sr-only">패키지 디자인</h2>
+            <div class="pf__intro">
+                <div class="pf__intro-txt">
+                    <span>PACKAGE Design</span>
+                    <h3>TREE, ECO AND KIEHL’S</h3>
+                    <p>키엘 수분크림
+                    디자인 공모전 출품작</p>
+                    <span>KIEHL'S Label Design Award</span>
+                </div>
+                <div class="pf__intro-img">
+                    <img src="../asset/img/pf/pf_frame_pkg4.png" alt="메인이미지">
+                </div>
+            </div>
+            <div class="pf__content">
+                <div class="pf__content-about effect">
+                    <p class="pf__content-num">01</p>
+                    <p class="pf__content-about-desc">인간과 자연은 하나임을 표현하기 위해 사람 얼굴을 자연의 일부분인 나무로 변형시키고 나뭇잎을 형상화하기 위해 머리카락은 초록색으로 표현하였습다.
+                    제품을 사용할때마다 많은 사람들이 나무를 포함한 모든 자연을 다시한번 생각하고 지키고자 하는 마음이 생겨나길 바라는 마음으로 디자인하였습니다.</p>
+                </div>
+                <div class="pf__content-detail effect">
+                    <p class="pf__content-num">02</p>
+                    <img src="../asset/img/pf/pf_sub_pkg4.png" alt="서브이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../asset/js/common.js"></script>
+    <script src="../asset/js/pf.js"></script>
 </body>
-<style>
-    #main .txt ul li:nth-child(3){letter-spacing: -3px;}
-</style>
+
 </html>
-
-

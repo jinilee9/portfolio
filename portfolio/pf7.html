@@ -1,53 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko" class="pop">
+<html lang="ko-KR" class="pop">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-<meta name="description" content="personal_portfolio">
-<meta name="keywords" content="alice,portfolio,personal,graphic,designer">
-<meta name="author" content="JinHeeLee">
-<title>JinHeeLee - Portfolio</title>
-<link rel="stylesheet" href="../asset/css/reset.css">
-<link rel="stylesheet" href="../asset/css/pf.css">
-<link rel="icon" href="../asset/img/intro/key.png">
- <script type="text/javascript">
- window.history.forward();
- function noBack(){window.history.forward();}
-</script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="description" content="personal_portfolio">
+    <meta name="keywords" content="portfolio,personal,graphic,web,designer,publisher">
+    <meta name="author" content="JinHeeLee">
+    <title>JinHeeLee - Portfolio</title>
+    <link rel="stylesheet" href="../asset/css/reset.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="icon" href="asset/img/key.png">
 </head>
-<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
-<div id="wrap">
-    <ul id="main">
-        <li class="txt">    
-           <ul>      
-                <li><span class="upper">PACKAGE</span>&nbsp;Design</li>
-                <li><img src="../asset/img/pf/pf_top_txtline.png" alt=""></li>
-                <li class="upper" style="padding-top:5%">BOMBAY&nbsp;SAPPHIRE</li>
-                <span>Limited Edition Package Award</span>
-                <li class="pt9">봄베이 사파이어<br>패키지 디자인 공모전 출품작</li>
-            </ul>
-        </li>
-        <li class="frame"><img src="../asset/img/pf/pf_frame_pkg1.png" alt=""></li>
-        <li class="obj"><img src="../asset/img/pf/pf_top_obj.png" alt=""></li>       
-    </ul>
-    <div id="content">
-        <ul>
-            <li><img src="../asset/img/pf/pf_num1_web.png" alt=""></li>
-            <li>봄베이 사파이어는 그 이름의 유래와도 같이 흙속에서 찾은 사파이어 원석을 아름답게 가공하는 과정이 고스란히 담겨있는 보석같은 술이다.<br><br> 
-그런 정신을 담고 있는 봄베이 사파이어 패키지를 가장 효과적으로 살릴 수 있고 그 컨셉을 소비자들에게 가장 잘 전달할 수 있는 방법을 생각하였다.</li>            
-        </ul>
-        <ul>
-            <li><img src="../asset/img/pf/pf_num2_pkg1.png" alt=""></li>
-            <li><img src="../asset/img/pf/pf_sub_pkg1.png" alt=""></li>
-        </ul>
-    </div>
-</div>
+
+<body>
+    <section class="pf">
+        <div class="pf__inner">
+            <h2 class="sr-only">패키지 디자인</h2>
+            <div class="pf__intro">
+                <div class="pf__intro-txt">
+                    <span>PACKAGE Design</span>
+                    <h3>BOMBAY SAPPHIRE</h3>
+                    <p>봄베이 사파이어<br>패키지 디자인 공모전 출품작</p>
+                    <span>Limited Edition Package Award</span>
+                </div>
+                <div class="pf__intro-img">
+                    <img src="../asset/img/pf/pf_frame_pkg1.png" alt="메인이미지">
+                </div>
+            </div>
+            <div class="pf__content">
+                <div class="pf__content-about effect">
+                    <p class="pf__content-num">01</p>
+                    <p class="pf__content-about-desc">봄베이 사파이어는 그 이름의 유래와도 같이 흙속에서 찾은 사파이어 원석을 아름답게 가공하는 과정이 고스란히 담겨있는 보석같은 술입니다. 그런 정신을 담고 있는 봄베이 사파이어 패키지를 가장 효과적으로 살릴 수 있고 그 컨셉을 소비자들에게 가장 잘 전달할 수 있는 방법을 생각하였습니다.</p>
+                </div>
+                <div class="pf__content-detail effect">
+                    <p class="pf__content-num">02</p>
+                    <img src="../asset/img/pf/pf_sub_pkg1.png" alt="서브이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../asset/js/common.js"></script>
+    <script src="../asset/js/pf.js"></script>
 </body>
-<style>
-    #main .txt ul li:nth-child(3){letter-spacing: -3px;}
-</style>
+
 </html>
-
-

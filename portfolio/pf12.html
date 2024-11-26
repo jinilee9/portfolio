@@ -1,49 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko" class="pop">
+<html lang="ko-KR" class="pop">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-<meta name="description" content="personal_portfolio">
-<meta name="keywords" content="alice,portfolio,personal,graphic,designer">
-<meta name="author" content="JinHeeLee">
-<title>JinHeeLee - Portfolio</title>
-<link rel="stylesheet" href="../asset/css/reset.css">
-<link rel="stylesheet" href="../asset/css/pf.css">
-<link rel="icon" href="../asset/img/intro/key.png">
- <script type="text/javascript">
- window.history.forward();
- function noBack(){window.history.forward();}
-</script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="description" content="personal_portfolio">
+    <meta name="keywords" content="portfolio,personal,graphic,web,designer,publisher">
+    <meta name="author" content="JinHeeLee">
+    <title>JinHeeLee - Portfolio</title>
+    <link rel="stylesheet" href="../asset/css/reset.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="icon" href="asset/img/key.png">
 </head>
-<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
-<div id="wrap">
-    <ul id="main">
-        <li class="txt">    
-           <ul>      
-                <li><span class="upper">brand identity</span>&nbsp;Design</li>
-                <li><img src="../asset/img/pf/pf_top_txtline.png" alt=""></li>
-                <li class="upper">jangpung bi</li>
-                <li class="pt9">양대창구이 장풍 청담점</li>
-            </ul>
-        </li>
-        <li class="frame"><img src="../asset/img/pf/pf_frame_work2.png" alt=""></li>
-        <li class="obj"><img src="../asset/img/pf/pf_top_obj.png" alt=""></li>       
-    </ul>
-    <div id="content">
-        <ul>
-            <li><img src="../asset/img/pf/pf_num1_web.png" alt=""></li>
-            <li>양·대창 전문점이라는 것을 멀리서도 쉽게 알아 볼 수 있도록 소 얼굴부분의 이미지를 단순화하여 심볼디자인 하였습니다. <br>
-사용된 블루와 레드색상은 로고의 장풍(바람)과 숯불구이의 불을 상징하며 양·대창 구이 전문점이라는 함축적 의미를 담고 있습니다.</li>     
-        </ul>
-        <ul>
-            <li><img src="../asset/img/pf/pf_num2_pkg1.png" alt=""></li>
-            <li><img src="../asset/img/pf/pf_sub_work2.png" alt=""></li>     
-        </ul>        
-    </div>
-</div>
+
+<body>
+    <section class="pf">
+        <div class="pf__inner">
+            <h2 class="sr-only">브랜드 디자인</h2>
+            <div class="pf__intro">
+                <div class="pf__intro-txt">
+                    <span>Brand Identity Design</span>
+                    <h3>JANGPUNG BI</h3>
+                    <p>양대창구이 장풍 청담점</p>
+                </div>
+                <div class="pf__intro-img">
+                    <img src="../asset/img/pf/pf_frame_work2.png" alt="메인이미지">
+                </div>
+            </div>
+            <div class="pf__content">
+                <div class="pf__content-about effect">
+                    <p class="pf__content-num">01</p>
+                    <p class="pf__content-about-desc">양·대창 전문점이라는 것을 멀리서도 쉽게 알아 볼 수 있도록 소 얼굴부분의 이미지를 단순화하여 심볼디자인 하였습니다.
+                    사용된 블루와 레드색상은 로고의 장풍(바람)과 숯불구이의 불을 상징하며 양·대창 구이 전문점이라는 함축적 의미를 담고 있습니다.</p>
+                </div>
+                <div class="pf__content-detail effect">
+                    <p class="pf__content-num">02</p>
+                    <img src="../asset/img/pf/pf_sub_work2.png" alt="서브이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../asset/js/common.js"></script>
+    <script src="../asset/js/pf.js"></script>
 </body>
+
 </html>
-
-

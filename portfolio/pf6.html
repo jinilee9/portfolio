@@ -1,53 +1,54 @@
 <!DOCTYPE html>
-<html lang="ko" class="pop">
+<html lang="ko-KR" class="pop">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-<meta name="description" content="personal_portfolio">
-<meta name="keywords" content="alice,portfolio,personal,graphic,designer">
-<meta name="author" content="JinHeeLee">
-<title>JinHeeLee - Portfolio</title>
-<link rel="stylesheet" href="../asset/css/reset.css">
-<link rel="stylesheet" href="../asset/css/pf.css">
-<link rel="icon" href="../asset/img/intro/key.png">
- <script type="text/javascript">
- window.history.forward();
- function noBack(){window.history.forward();}
-</script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="description" content="personal_portfolio">
+    <meta name="keywords" content="portfolio,personal,graphic,web,designer,publisher">
+    <meta name="author" content="JinHeeLee">
+    <title>JinHeeLee - Portfolio</title>
+    <link rel="stylesheet" href="../asset/css/reset.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="icon" href="asset/img/key.png">
 </head>
-<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
-<div id="wrap">
-    <ul id="main">
-        <li class="txt">    
-           <ul>      
-                <li><span class="upper">ucc</span>&nbsp;Design</li>
-                <li><img src="../asset/img/pf/pf_top_txtline.png" alt=""></li>
-                <li class="upper">life&nbsp;in&nbsp;korea</li>
-                <li class="pt9">뉴질랜드에서 유학하자<br>영상 공모전 출품작</li>
-            </ul>
-        </li>
-        <li class="frame"><img src="../asset/img/pf/pf_frame_ucc.png" alt=""></li>
-        <li class="obj"><img src="../asset/img/pf/pf_top_obj.png" alt=""></li>       
-    </ul>
-    <div id="content">
-        <ul>
-            <li><img src="../asset/img/pf/pf_num1_web.png" alt=""></li>
-            <li>패밀리 레스토랑의 선두주자, 샐러드 바의 시초로 불리는 씨즐러를 홍보하기 위한 사이트이다.<br><br> 딱딱하고 틀에 맞춰진 스타일을 벗어나 홈페이지를 방문하는 방문객들에게
-호기심을 자극하고 흥미를 유발하고자 페이지를 구성했다.</li>            
-        </ul>
-        <ul>
-            <li><img src="../asset/img/pf/pf_num2_ucc.png" alt=""></li>
-            <li><video src="../asset/img/pf/pf_main_ucc.mp4" controls poster="../asset/img/pf/pf_main_ucc.jpg" height="698" width="1148"></video></li>
-        </ul>
-                <ul>
-            <li><img src="../asset/img/pf/pf_num3_ucc.png" alt=""></li>
-            <li><img src="../asset/img/pf/pf_sub_ucc.png" alt=""></li>
-        </ul>
-    </div>
-</div>
+<body>
+    <section class="pf">
+        <div class="pf__inner">
+            <h2 class="sr-only">반응형 홈페이지</h2>
+            <div class="pf__intro">
+                <div class="pf__intro-txt">
+                    <span>UCC Design</span>
+                    <h3>LIFE IN KOREA</h3>
+                    <p>뉴질랜드에서 유학하자<br>
+                    영상 공모전 출품작</p>
+                    <a href="../asset/link/html_5/index.html">VISTE WEBSITE</a>
+                </div>
+                <div class="pf__intro-img">
+                    <img src="../asset/img/pf/pf_frame_ucc.png" alt="메인이미지">
+                </div>
+            </div>
+            <div class="pf__content">
+                <div class="pf__content-about effect">
+                    <p class="pf__content-num">01</p>
+                    <p class="pf__content-about-desc">한국인으로 살아가는 대한민국의 삶에 대해 알리고 싶었습니다.<br>
+                    다소 부정적인 한국의 삶과 해외에서의 삶을 비교하고자 영상으로 만들어 제작해보았습니다.</p>
+                </div>
+                <div class="pf__content-video effect">
+                    <p class="pf__content-num">02</p>
+                    <video src="../asset/img/pf/pf_main_ucc.mp4" controls="" poster="../asset/img/pf/pf_main_ucc.jpg" height="698"width="1120"></video>
+                </div>
+                <div class="pf__content-detail effect">
+                    <p class="pf__content-num">03</p>
+                    <img src="../asset/img/pf/pf_sub_ucc.png" alt="서브이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../asset/js/common.js"></script>
+    <script src="../asset/js/pf.js"></script>
 </body>
+
 </html>
-
-
