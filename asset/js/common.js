@@ -24,7 +24,7 @@ var portfolioIframe = {
     },
     close : function(){
         $('#popIframe').stop().fadeOut(400, function(){ //서서히 사라진다
-            $(this).addClass('close').css({'top':'-115%'}) // 초기 위치값 설정
+            $(this).addClass('close').css({ 'top': '-115%' }) // 초기 위치값 설정
         });
     }
 }
@@ -32,9 +32,3 @@ var portfolioIframe = {
 function goToHome() {
     window.location.href = 'index.html';
 }
-
-
-
-
-
-

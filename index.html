@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <meta name="description" content="personal_portfolio">
     <meta name="keywords" content="portfolio,personal,graphic,web,designer,publisher">
     <meta name="author" content="JinHeeLee">
@@ -44,8 +45,39 @@
             </nav>
         </section>
     </main>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="asset/libs/jquery.nicescroll.min.js"></script>
+    <div id="page-transition"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const PageTransition = {
+                start: function (url) {
+                    const transition = document.getElementById('page-transition');
+                    transition.classList.add('active');
+
+                    // 페이지 이동
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 1600); 
+                },
+
+                end: function () {
+                    const transition = document.getElementById('page-transition');
+                    transition.classList.remove('active');
+                }
+            };
+
+            // 네비게이션 링크 클릭 이벤트
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetUrl = this.getAttribute('href');
+                    PageTransition.start(targetUrl);
+                });
+            });
+
+            // 페이지 로드 시 트랜지션 종료
+            window.addEventListener('load', PageTransition.end);
+        });
+    </script>
 </body>
 
 </html>
