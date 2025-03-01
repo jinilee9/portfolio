@@ -1,0 +1,381 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>The Mars: Metaverse Project</title>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:image" content="images/linkimg_pet.jpg">
+    <link rel="shortcut icon" type="image/ico" sizes="32x32" href="images/favicon_32x32.png">
+    <link rel="shortcut icon" type="image/ico" sizes="128x128" href="images/favicon_128x128.png">
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+    <script type="text/javascript" src="https://wowjs.uk/dist/wow.min.js"></script>
+
+    <script type="text/javascript" src="js/countUp.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script>
+        let sc = new SmartContract();
+    </script>
+
+    <script>
+        function setQty2Buy(qty) {
+            document.getElementById("qty2buy").value = qty;
+            if(window.location.pathname.indexOf('en') !== -1)
+                alert('\nAre you sure you want to mint ' +qty+ ' NFTs?\n\nYou have only one chance to mint this time.'); 
+            else
+                alert('\n민팅기회는 단 한 번뿐입니다.\n\n' +qty+ '개 민팅하시는게 맞습니까?');
+
+            return;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="modal_result">
+        <div class="modal_content">
+            <div>
+                Your minting order has been successfully placed.<br>
+                However, you may not receive NFT you ordered due to the blockchain network status matters.<br>
+                If so, please try again for your order.<br>
+                You can check the transaction via following URL.<br><br>
+            </div>
+            <a id="modal_msg" target="_blank"></a>
+            <br><br>
+            <button id="modal_btn" type="button" onclick="modal_close();">Got it!</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="header">
+            <div>
+                <h1><a href="#" class="logo logo-lg">the mars.</a></h1>
+                <nav class="gnb-w">
+                    <ul class="menu-link">
+                        <li><a href="https://nft.marscompany.co" target="_blank">The Martians</a></li>                   
+                        <li><a href="#">Mining PET</a></li>   
+                        <li><a href="https://www.marscompany.co" target="_blank">About The Mars</a></li>                     
+                    </ul>
+                    <ul class="sns-link">
+                        <li class="lang"><a href="../kr/">KR</a></li>
+                        <li><a href="https://t.me/The_Mars_kr" target="_blank"><i class="ico-telegram"></i></a></li>   
+                        <li><a href="https://discord.com/invite/enXDzvEUGh" target="_blank"><i class="ico-discord"></i></a></li>    
+                        <li><a href="https://twitter.com/Mars_Labs" target="_blank"><i class="ico-twitter"></i></a></li>
+                    </ul>                    
+                    <div class="btn-sm"><button><a href="javascript:sc.connectToMetamask();" id="isConnectToMetamask" type="button">CONNECT WALLET</a></button></div>
+                    <!-- <div class="btn-sm"><button><a href="javascript:alert('Coming Soon :)');" id="isConnectToMetamask" type="button">CONNECT WALLET</a></button></div> -->
+                </nav>
+                
+                <nav class="gnb-m">
+                    <!-- 상단 바 및 메뉴버튼 아이콘  -->
+                    <div class="m-top-bar">
+                        <div class="ico toggle-side-bar-btn">
+                            <div class="toggle-ico">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 좌측 사이드 바 메뉴 -->
+                    <div class="left-side-bar-box">
+                        <div class="left-side-bar">
+                            <div class="left-side-menus">
+                                <button type="button" class="btn btn-block"><a href="javascript:sc.connectToMetamask();" id="isConnectToMetamask_mob" type="button">CONNECT WALLET</a></button>
+                                <ul>
+                                    <li><a href="https://nft.marscompany.co" target="_blank">The Martians</a></li>                   
+                                    <li><a href="#">Mining PET</a></li>  
+                                    <li><a href="https://www.marscompany.co" target="_blank">About The Mars</a></li>
+                                </ul>
+                                <ul class="sns-link">
+                                    <li class="lang"><a href="../kr/">KR</a></li>
+                                    <li><a href="https://t.me/The_Mars_kr" target="_blank"><i class="ico-telegram"></i></a></li>   
+                                    <li><a href="https://discord.com/invite/enXDzvEUGh" target="_blank"><i class="ico-discord"></i></a></li>    
+                                    <li><a href="https://twitter.com/Mars_Labs" target="_blank"><i class="ico-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav> 
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        <section class="main">
+            <div class="main-visual">
+                <div class="visual-txt text-center text-white">
+                    <img src="images/visual-logo.png" alt="MRST Mining PETS NFT">
+                    
+                    <div class="minting-wrap">
+                        <button class="btn btn-item grad-l" type="button" id="btn-buy" onclick="buyNft();"><span>30 MATIC</span>&nbsp;/&nbsp;MINT</button>
+                        <!--<button onclick="window.open('https://www.oneplanetnft.io/collections/items/0x584666E270341ceE2C2d41C23821A568a9068aC8?utm_source=themars&utm_medium=website&utm_campaign=marketplace+button&sort=price_low_to_high')" class="btn btn-item grad-l btn-inline" type="button">OnePlanet</button>
+                        <div id="container4signPcOnlyAndText">                           
+                        <ul>
+                                <li>&#42; 1st minting will only be able to be accessed <br>for Holders of The Martians NFT, or Sunmiya Club, or Klaypad.</li>
+                                <li>&#42; You can buy up to 3 NFTs on your transaction, <br>but it's just one chance to buy, then can't buy anymore if you completed.</li>
+                            </ul> 
+                        </div>-->
+                    </div>
+                    <div class="reveal-wrap">    
+                        <button class="btn btn-item grad-r" type="button" id="btn-reveal" onclick="revealNft();">REVEAL</button>
+                        <!-- <p id="pcOnly">Minting available on <strong>PC and Mobile</strong></p> -->
+                        <p>Click the button to reveal your MRST Mining Pets NFT.<br>
+                            If you have 3 NFTs, you must do this 3 times.</p>
+                    </div>
+                    <!-- <button class="btn btn-buy" type="button" id="btn-buyOnOpensea" href="https://opensea.io/collection/mrst-mining-pet-cube" style="display: none;">BUY ON OPENSEA</button> -->
+                    <div class="fusion-wrap">
+                        <a href="https://nft.marscompany.co/pet/fusion/en/">
+                            <span>FUSION</span>
+                            <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+                                <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="white"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="main-char-wrap">
+                    <p class="char-left wow bounceInLeft" data-wow-delay="0.2s" data-wow-iteration="1"><img src="images/visual-pet01.png" alt=""></p>
+                    <p class="char-right wow bounceInRight" data-wow-delay="0.5s" data-wow-iteration="1"><img src="images/visual-pet02.png" alt=""></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="container">
+        <section class="bg-fixed-wrap01">
+            <div class="bg-wrap">
+                <div class="img-fixed"></div>
+            </div>
+        </section>
+        <section class="section01 text-white text-center">
+            <div class="inner">
+                <h2 data-aos="zoom-out" data-aos-duration="1000">Mining PET NFT</h2>
+                <div class="txt-wrap" data-aos="fade-up" data-aos-duration="1500">
+                    <p><strong>We are pleased to introduce our NFT project.</strong></p>
+                    <p>MRST Mining Pet NFT is designed to provide higher hashrate for mining activities in MRST Mining App.<br>
+                        It is the world's first utility NFTs in crypto mining applications.</p>
+                    <p>It boosts the mining activities based on its capacity to earn more $MRST,<br>
+                        such as increasing mining speed and/or reducing boost charging time.</p>    
+                    <p>MRST Mining Pets NFT is built on Polygon Chain &#40;ERC721).<br>
+                        Players can trade them at several NFT marketplaces &#40;e.g., OnePlanet, OpenSea&#41;.</p>
+                    <p>Players can use up to three Mining pets for mining activities, and max. of 30 Mining Pets NFTs can be stored in the inventory.</p>
+                </div>
+                <div class="btn-buywrap">
+                    <a href="https://opensea.io/collection/mrst-mining-pet-cube" class="btn btn-buy" target="_blank">BUY ON OPENSEA</a>
+                    <a href="https://www.oneplanetnft.io/collections/items/0x584666E270341ceE2C2d41C23821A568a9068aC8?utm_source=themars&utm_medium=website&utm_campaign=marketplace+button&sort=price_low_to_high" class="btn btn-buy" target="_blank">BUY ON ONEPLANT</a>
+                </div>
+            </div>
+        </section> 
+        <section class="section02">
+            <div class="inner">
+                <div class="txt-wrap">
+                    <h2 data-aos="zoom-out-right" data-aos-duration="800">PET RARITY</h2>
+                    <div data-aos="fade-right" data-aos-duration="1000">
+                        <p>All MRST Mining Pets NFT will be assigned different classes.<br>
+                            The higher class have higher rarity, and expect higher efficiency of increasing mining speed and reducing boost charging time than lower class.
+                            You can recognize their rarity by color.</p>
+                        <p>At the first round, 100,000 of MRST Mining Pets NFT were created by the automatically generated through programming out of 54 million combinations. They will each be unique in its own right with no others alike.</p>
+                    </div>
+                </div>
+                <div class="slider-wrap">
+                    <div class="slider01">
+                        <div class="item">
+                            <ul class="slider slider-box01">
+                                <li><img src="images/img-slide01-1.jpg" alt=""></li>
+                                <li><img src="images/img-slide01-2.jpg" alt=""></li>
+                                <li><img src="images/img-slide01-3.jpg" alt=""></li>
+                                <li><img src="images/img-slide01-4.jpg" alt=""></li>
+                            </ul>
+                            <p class="name">Legendary</p>
+                        </div>
+                        <div >
+                            <ul class="slider slider-box02">
+                                <li><img src="images/img-slide02-1.jpg" alt=""></li>
+                                <li><img src="images/img-slide02-2.jpg" alt=""></li>
+                                <li><img src="images/img-slide02-3.jpg" alt=""></li>
+                                <li><img src="images/img-slide02-4.jpg" alt=""></li>
+                            </ul>
+                            <p class="name">Epic</p>
+                        </div>
+                        <div>
+                            <ul class="slider slider-box03">
+                                <li><img src="images/img-slide03-1.jpg" alt=""></li>
+                                <li><img src="images/img-slide03-2.jpg" alt=""></li>
+                                <li><img src="images/img-slide03-3.jpg" alt=""></li>
+                                <li><img src="images/img-slide03-4.jpg" alt=""></li>
+                            </ul>
+                            <p class="name">Rare</p>
+                        </div>
+                    </div>
+                    <div class="slider02">
+                        <div>
+                            <ul class="slider slider-box04">
+                                <li><img src="images/img-slide04-1.jpg" alt=""></li>
+                                <li><img src="images/img-slide04-2.jpg" alt=""></li>
+                                <li><img src="images/img-slide04-3.jpg" alt=""></li>
+                                <li><img src="images/img-slide04-4.jpg" alt=""></li>
+                            </ul>
+                            <p class="name">Advanced</p>
+                        </div>
+                        <div>
+                            <ul class="slider slider-box05">
+                                <li><img src="images/img-slide05-1.jpg" alt=""></li>
+                                <li><img src="images/img-slide05-2.jpg" alt=""></li>
+                                <li><img src="images/img-slide05-3.jpg" alt=""></li>
+                                <li><img src="images/img-slide05-4.jpg" alt=""></li>
+                            </ul>
+                            <p class="name">Special</p>
+                        </div>
+                        <div>
+                            <ul class="slider slider-box06">
+                                <li><img src="images/img-slide06-1.jpg" alt=""></li>
+                                <li><img src="images/img-slide06-2.jpg" alt=""></li>
+                                <li><img src="images/img-slide06-3.jpg" alt=""></li>
+                                <li><img src="images/img-slide06-4.jpg" alt=""></li>
+                            </ul>
+                            <p class="name">Normal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section03 text-white">
+            <div class="inner">
+                <div class="txt-wrap">
+                    <h2 data-aos="zoom-out-right" data-aos-duration="800">PET RANDOM CUBE</h2>
+                    <p  data-aos="fade-right" data-aos-duration="1000">All MRST Mining Pets NFT are hiding inside of Random Cube.<br>
+                       After minting Random Cube, then you will be able to open the cube on a certain date in order to find your own MRST Mining Pet NFT!</p>
+                </div>
+                <div class="cont-wrap">
+                    <div class="cont-left">
+                        <div class="random-cube">
+                            <img src="images/random-cube.gif" alt="">
+                        </div>
+                        <div class="cube-txt text-center">
+                            <p class="num" id="count0">100,000</p>
+                            <p class="rarity">NFTs in TOTAL</p>
+                        </div>
+                    </div>
+                    <div class="cont-right">
+                        <ul>
+                            <li>
+                                <p class="num"><span id="count1">2,000</span> NFTs &#40;2%&#41;</p>
+                                <p class="rarity">LEGENDARY</p>
+                            </li>
+                            <li>
+                                <p class="num"><span id="count2">5,000</span> NFTs &#40;5%&#41;</p>
+                                <p class="rarity">EPIC</p>
+                            </li>
+                            <li>
+                                <p class="num"><span id="count3">8,000</span> NFTs &#40;8%&#41;</p>
+                                <p class="rarity">RARE</p>
+                            </li>
+                            <li>
+                                <p class="num"><span id="count4">10,000</span> NFTs &#40;10%&#41;</p>
+                                <p class="rarity">ADVANCED</p>
+                            </li>
+                            <li>
+                                <p class="num"><span id="count5">20,000</span> NFTs &#40;20%&#41;</p>
+                                <p class="rarity">SPECIAL</p>
+                            </li>
+                            <li>
+                                <p class="num"><span id="count6">55,000</span> NFTs &#40;55%&#41;</p>
+                                <p class="rarity">NORMAL</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-fixed-wrap02">
+            <div class="bg-wrap">
+                <div class="img-fixed"></div>
+            </div>
+        </section>
+        <section class="section04 text-white">
+            <div class="inner">
+                <h2 data-aos="zoom-out-right" data-aos-duration="800">SCHEDULE &amp; PRICE</h2>
+                <div class="map-wrap">
+                    <div>
+                        <div class="map-cont">
+                            <div class="line-up">
+                                <div class="line-up-cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500">
+                                    <div class="circle">
+                                        <div class="circle-in"></div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Mar 7, 2022 - Mar 11, 2022</h3>
+                                        <p>MRST Mining Pets NFT whitelist starts.</p>
+                                    </div>
+                                </div>
+                                <div class="line-up-cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                                    <div class="circle">
+                                        <div class="circle-in"></div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Mar 11, 2022</h3>
+                                        <p>Page of MRST Mining Pets NFT opens.</p>
+                                    </div>
+                                </div>
+                                <div class="line-up-cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1500">
+                                    <div class="circle">
+                                        <div class="circle-in"></div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Mar 16, 2022</h3>
+                                        <p>The Martians NFT holders will be able purchase up to 3 MRST Mining Pets NFT for 10 MATIC each. <br>&#40;20,000 NFTs are allocated in total.&#41;</p>
+                                    </div>
+                                </div>
+                                <div class="line-up-cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000">
+                                    <div class="circle">
+                                        <div class="circle-in"></div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Mar 18, 2022</h3>
+                                        <p>The whitelist winners will be able to purchase up to 3 MRST Mining Pets NFT for 15 MATIC each. <br>&#40;50,000 NFTs are allocated in total, but multiple purchases will not be guaranteed.&#41;</p>
+                                    </div>
+                                </div>
+                                <div class="line-up-cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2500">
+                                    <div class="circle">
+                                        <div class="circle-in"></div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Mar 22, 2022</h3>
+                                        <p>Anyone will be able to purchase the rest of total NFTs for 30 MATIC each. <br>&#40;No restriction&#41;</p>
+                                    </div>
+                                </div>
+                                <div class="line-up-cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
+                                    <div class="circle">
+                                        <div class="circle-in"></div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Mar 30, 2022</h3>
+                                        <p>Random Cube Reveal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>     
+    </section>      
+    <footer>
+        <div class="go-top on"><b>TOP</b></div>
+        <section class="footer">
+            <div class="inner text-center">
+                <img src="images/footer-logo.png" alt="">
+                <p class="copyright text-white">Copyright© THE MARS LABS. All Rights Reserved.</p>
+            </div>
+        </section>
+    </footer>
+
+    </body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mellow : Better than Earth">
+  <meta property="og:description" content="Enough mining, it's time to play now! 지루한 채굴은 그만! 이제 재밌는 게임으로 즐기세요!">
+  <meta property="og:image" content="assets/images/common/mellow_thumbnail.jpg">
+  <meta property="og:url" content="auto">
+  <meta name="twitter:title" content="Mellow : Better than Earth">
+  <meta name="twitter:description" content="Enough mining, it's time to play now! 지루한 채굴은 그만! 이제 재밌는 게임으로 즐기세요!">
+  <meta name="twitter:image" content="assets/images/common/mellow_thumbnail.jpg">
+  <title>Mellow : Better than Earth</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <!-- <p class="header__title">
+        <a href="#" class="header__logo">
+          <picture>
+            <source srcset="assets/images/common/logo_mellow.webp" type="image/webp">
+            <img src="assets/images/common/logo_mellow.png" alt="">
+          </picture>
+        </a>
+      </p> -->
+      <div class="social">
+        <a href="https://discord.com/invite/marslabs" target="_blank" class="social__item">
+          <svg viewBox="0 0 22 22" width="22" height="22" class="social__icon">
+            <path
+              d="M5.068,14.464c0.331,0.473,0.731,0.831,1.195,1.102c0.453,0.264,0.935,0.478,1.422,0.723c-0.167,0.21-0.353,0.444-0.539,0.677c-0.05,0.063-0.113,0.119-0.151,0.189c-0.169,0.311-0.415,0.382-0.762,0.342c-1.445-0.166-2.728-0.67-3.759-1.735c-0.102-0.106-0.192-0.225-0.291-0.334c-0.154-0.169-0.199-0.361-0.191-0.591c0.113-2.993,0.822-5.835,2.132-8.524c0.061-0.126,0.164-0.248,0.277-0.33C5.399,5.27,6.494,4.78,7.704,4.569C7.928,4.53,8.154,4.5,8.38,4.49c0.096-0.004,0.194,0.057,0.341,0.105C7.965,4.899,7.269,5.156,6.592,5.458C5.914,5.76,5.285,6.155,4.7,6.64c4.092-1.963,8.174-2.06,12.267-0.045c-1.098-0.882-2.357-1.444-3.684-1.874c0.099-0.203,0.234-0.246,0.446-0.227c1.433,0.132,2.712,0.663,3.881,1.485c0.11,0.077,0.214,0.19,0.273,0.31c0.903,1.847,1.518,3.789,1.863,5.818c0.161,0.95,0.244,1.906,0.263,2.868c0.002,0.123-0.047,0.269-0.121,0.367c-0.763,1.006-1.785,1.625-2.988,1.937c-0.468,0.121-0.958,0.163-1.44,0.229c-0.072,0.01-0.179-0.025-0.224-0.079c-0.312-0.369-0.611-0.748-0.935-1.148c1.096-0.345,2.042-0.882,2.773-1.836C13.055,16.783,9.081,16.709,5.068,14.464zM8.119,13.731c0.354,0.002,0.667-0.113,0.939-0.338c0.448-0.37,0.596-0.865,0.659-1.432c0.131-1.173-1.174-2.037-2.2-1.574c-0.75,0.339-1.148,1.243-0.91,2.1C6.813,13.231,7.42,13.731,8.119,13.731z M13.758,13.753c0.181-0.042,0.37-0.063,0.54-0.131c1.105-0.439,1.398-1.992,0.551-2.887c-0.593-0.626-1.565-0.636-2.168-0.019c-0.424,0.434-0.551,0.962-0.49,1.556C12.272,13.066,12.975,13.728,13.758,13.753z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://twitter.com/Mars_Labs" target="_blank" class="social__item">
+          <svg viewBox="0 0 22 22" width="22" height="22" class="social__icon">
+            <path
+              d="M18.71,18.74l-6.13-8.92l5.63-6.54l0.14-0.17h-0.22h-1.35h-0.05l-0.03,0.03l-4.84,5.63L8,3.15L7.97,3.11H7.92H3.38H3.19l0.11,0.16l5.91,8.6l-5.9,6.86l-0.14,0.17h0.22h1.35h0.05l0.03-0.03l5.12-5.95L14,18.85l0.03,0.04h0.05h4.54h0.19L18.71,18.74z M14.77,17.73l-4.08-5.83l-0.6-0.86L5.4,4.32h1.82l3.84,5.5l0.6,0.86l4.92,7.04H14.77z"
+              fill="#ffffff"></path>
+          </svg>
+        </a>
+        <a href="https://t.me/marslabs" target="_blank" class="social__item">
+          <svg viewBox="0 0 22 22" width="22" height="22" class="social__icon">
+            <path
+              d="M3.132,10.044l10.683-4.402c1.055-0.459,4.631-1.926,4.631-1.926s1.651-0.642,1.513,0.917c-0.046,0.642-0.413,2.889-0.779,5.319l-1.146,7.199c0,0-0.092,1.055-0.871,1.238c-0.779,0.183-2.063-0.642-2.293-0.825c-0.183-0.138-3.439-2.201-4.631-3.21c-0.321-0.275-0.688-0.825,0.046-1.467c1.651-1.513,3.622-3.393,4.814-4.585c0.55-0.55,1.1-1.834-1.192-0.275l-6.465,4.356c0,0-0.734,0.459-2.109,0.046c-1.376-0.413-2.98-0.963-2.98-0.963S1.252,10.777,3.132,10.044L3.132,10.044z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCq1f08ovS1G3akT_-u93NrA/featured" target="_blank"
+          class="social__item">
+          <svg viewBox="0 0 22 22" width="22" height="22" class="social__icon">
+            <path
+              d="M20.791,6.063c-0.235-0.885-0.928-1.582-1.807-1.819C17.391,3.815,11,3.815,11,3.815s-6.391,0-7.985,0.43C2.136,4.482,1.444,5.178,1.209,6.063c-0.427,1.604-0.427,4.951-0.427,4.951s0,3.347,0.427,4.951c0.235,0.885,0.928,1.553,1.807,1.79c1.594,0.43,7.985,0.43,7.985,0.43s6.391,0,7.985-0.43c0.879-0.237,1.572-0.905,1.807-1.79c0.427-1.604,0.427-4.951,0.427-4.951S21.218,7.668,20.791,6.063z M8.91,14.053V7.976l5.341,3.039L8.91,14.053z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://marslabs.medium.com/" target="_blank" class="social__item">
+          <svg viewBox="0 0 22 22" width="22" height="22" class="social__icon">
+            <path
+              d="M19.945,3.597l0.022-0.005V3.419h-1.28h-2.415h-0.84h-0.004h-0.019l-4.232,9.946L6.946,3.419H2.035v0.173l0.022,0.005c0.832,0.188,1.254,0.468,1.254,1.478v11.822c0,1.01-0.424,1.29-1.256,1.478l-0.022,0.005v0.173h3.331v-0.173l-0.022-0.005c-0.832-0.188-1.254-0.468-1.254-1.478V5.76l5.438,12.792h0.308l5.595-13.149v11.787c-0.071,0.798-0.489,1.044-1.243,1.214l-0.022,0.005v0.173h5.804v-0.173l-0.022-0.005c-0.754-0.17-1.183-0.416-1.254-1.214L18.687,5.074l0.004,0C18.691,4.064,19.113,3.784,19.945,3.597">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <section class="sec01">
+      <div class="sec01__video">
+        <div data-vbg-autoplay="true" data-vbg="https://youtu.be/ABV0fw6EJmo" poster="assets/images/main/img_cover.jpg"
+          class="video_player"></div>
+      </div>
+      <div class="sec01__bgdot"></div>
+      <div class="sec01__cont">
+        <div class="sec01__title">
+          <div class="sec01__title-logo">
+            <picture>
+              <source srcset="assets/images/common/logo_mellow.webp" type="image/webp">
+              <img src="assets/images/common/logo_mellow.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="sec01__store only-pc">
+          <h2 class="sec01__title-txt">Mellow’s Early Access <br>Launch March 28th</h2>
+          <p class="sec01__title-desc">Better than Earth</p>
+          <ul class="store__list">
+            <li class="store__item">
+              <a href="" class="store_link">
+                <img src="assets/images/main/btn_apple.svg" class="img_store" alt="Download on the App Store">
+              </a>
+            </li>
+            <li class="store__item">
+              <a href="" class="store_link">
+                <img src="assets/images/main/btn_google.svg" class="img_store" alt="Download on the Google Play">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="sec01_mo only-mo">
+      <div class="sec01__store">
+        <h2 class="sec01__title-txt">Mellow’s Early Access <br>Launch March 28th</h2>
+        <p class="sec01__title-desc">Better than Earth</p>
+        <ul class="store__list">
+          <li class="store__item">
+            <a href="" class="store_link">
+              <img src="assets/images/main/btn_apple.svg" class="img_store" alt="Download on the App Store">
+            </a>
+          </li>
+          <li class="store__item">
+            <a href="" class="store_link">
+              <img src="assets/images/main/btn_google.svg" class="img_store" alt="Download on the Google Play">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="sec02 only-pc">
+      <div class="sec02__bgtxt">WORLD</div>
+      <ul class="sec02__list">
+        <li class="sec02__item">
+          <div class="sec02__txt">
+            <div class="sec02__heading">
+              <h4 class="sec02__title">Prelude to Martian Emigration</h4>
+            </div>
+            <div class="sec02__img">
+              <picture>
+                <source srcset="assets/images/main/sec02_img01.webp" type="image/webp">
+                <img src="assets/images/main/sec02_img01.jpg" alt="">
+              </picture>
+            </div>
+            <div class="sec02__desc">
+              <p>Beset by climate catastrophe and geopolitical unrest, Earth's inhabitants unite to forge the "First
+                Expedition," a monumental spacecraft designed for Mars colonization. This vessel symbolizes humanity's
+                technological pinnacle and its desperate quest for a fresh start beyond a dying Earth. It marks the dawn of
+                an audacious journey towards Mars, promising a new chapter in human endurance and innovation.</p>
+            </div>
+          </div>
+        </li>
+        <li class="sec02__item">
+          <div class="sec02__txt">
+            <div class="sec02__heading">
+              <h4 class="sec02__title">Unexpected <br class="only-mo">Challenges</h4>
+            </div>
+            <div class="sec02__img">
+              <picture>
+                <source srcset="assets/images/main/sec02_img02.webp" type="image/webp">
+                <img src="assets/images/main/sec02_img02.jpg" alt="">
+              </picture>
+            </div>
+            <div class="sec02__desc">
+              <p>As the first wave of colonists embarked on their voyage to Mars, their dreams of a new beginning were soon met with unforeseen obstacles. The ambitious project to terraform the planet encountered mysterious energies—elusive forces that defied understanding and interfered with their efforts, challenging their vision of a rejuvenated Earth. Furthermore, the harsh Martian landscape proved hostile to Earth-made technology, leading to critical equipment failures and testing the resilience of these pioneering settlers.</p>
+            </div>
+          </div>
+        </li>
+        <li class="sec02__item">
+          <div class="sec02__txt">
+            <div class="sec02__heading">
+              <h4 class="sec02__title">Emergence <br class="only-mo">of Bitrium</h4>
+            </div>
+            <div class="sec02__img">
+              <picture>
+                <source srcset="assets/images/main/sec02_img03.webp" type="image/webp">
+                <img src="assets/images/main/sec02_img03.jpg" alt="">
+              </picture>
+            </div>
+            <div class="sec02__desc">
+              <p>Leveraging the remnants of the First Expedition, the settlers established a thriving colony on Mars, initially buoyed by Earth's support which gradually waned. Amidst growing independence, they uncovered a vast, near-infinite energy source—Bitrium—mastering its power to fuel their new world.</p>
+            </div>
+          </div>
+        </li>
+        <li class="sec02__item">
+          <div class="sec02__txt">
+            <div class="sec02__heading">
+              <h4 class="sec02__title">New Settlers <br class="only-mo">of Mars</h4>
+            </div>
+            <div class="sec02__img">
+              <picture>
+                <source srcset="assets/images/main/sec02_img04.webp" type="image/webp">
+                <img src="assets/images/main/sec02_img04.jpg" alt="">
+              </picture>
+            </div>
+            <div class="sec02__desc">
+              <p>A specialized group, known as the Phobos and Senatus, was formed to oversee the potent Martian resource, Bitrium. Their ambition to share it with Earth was thwarted when Bitrium dissipated outside Mars, ultimately transforming into a protective virtual atmosphere enveloping the colony.</p>
+            </div>
+          </div>
+        </li>
+        <li class="sec02__item">
+          <div class="sec02__txt">
+            <div class="sec02__heading">
+              <h4 class="sec02__title">Mellow, <br class="only-mo">&#8216;Better than Earth&#8217;</h4>
+            </div>
+            <div class="sec02__img">
+              <picture>
+                <source srcset="assets/images/main/sec02_img05.webp" type="image/webp">
+                <img src="assets/images/main/sec02_img05.jpg" alt="">
+              </picture>
+            </div>
+            <div class="sec02__desc">
+              <p>The revelation of Mars' advancements spurred a mass exodus from Earth, centering life around the iconic Mars Tower. United by hope for a crisis-free future, humanity collaboratively strengthens Mars, persistently exploring its vastness for growth. Facing new challenges, this burgeoning society aspires to eclipse Earth, continuously forging ahead.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="sec02_mo only-mo">
+      <div class="sec02__bgtxt">WORLD</div>
+      <div class="swiper sec02_swiper">
+        <ul class="sec02__list swiper-wrapper">
+          <li class="sec02__item swiper-slide">
+            <div class="sec02__txt">
+              <div class="sec02__heading">
+                <h4 class="sec02__title">Prelude to Martian Emigration</h4>
+              </div>
+              <div class="sec02__img">
+                <picture>
+                  <source srcset="assets/images/main/sec02_img01.webp" type="image/webp">
+                  <img src="assets/images/main/sec02_img01.jpg" alt="">
+                </picture>
+              </div>
+              <div class="sec02__desc">
+                <p>Facing Earth's environmental collapse, humanity crafts the "First Expedition," a spaceship bound for Mars, heralding a bold leap towards a new beginning.</p>
+              </div>
+            </div>
+          </li>
+          <li class="sec02__item swiper-slide">
+            <div class="sec02__txt">
+              <div class="sec02__heading">
+                <h4 class="sec02__title">Unexpected <br class="only-mo">Challenges</h4>
+              </div>
+              <div class="sec02__img">
+                <picture>
+                  <source srcset="assets/images/main/sec02_img02.webp" type="image/webp">
+                  <img src="assets/images/main/sec02_img02.jpg" alt="">
+                </picture>
+              </div>
+              <div class="sec02__desc">
+                <p>Upon reaching Mars, the first colonists faced unexpected hurdles: mysterious energies disrupted their terraforming efforts, and Earth's technology failed in the alien environment, testing their resolve and adaptability.</p>
+              </div>
+            </div>
+          </li>
+          <li class="sec02__item swiper-slide">
+            <div class="sec02__txt">
+              <div class="sec02__heading">
+                <h4 class="sec02__title">Emergence <br class="only-mo">of Bitrium</h4>
+              </div>
+              <div class="sec02__img">
+                <picture>
+                  <source srcset="assets/images/main/sec02_img03.webp" type="image/webp">
+                  <img src="assets/images/main/sec02_img03.jpg" alt="">
+                </picture>
+              </div>
+              <div class="sec02__desc">
+                <p>With the First Expedition's resources, settlers built a Mars colony, their support from Earth fading. They then harnessed a near-infinite energy, Bitrium, securing their future.</p>
+              </div>
+            </div>
+          </li>
+          <li class="sec02__item swiper-slide">
+            <div class="sec02__txt">
+              <div class="sec02__heading">
+                <h4 class="sec02__title">New Settleres <br class="only-mo">of Mars</h4>
+              </div>
+              <div class="sec02__img">
+                <picture>
+                  <source srcset="assets/images/main/sec02_img04.webp" type="image/webp">
+                  <img src="assets/images/main/sec02_img04.jpg" alt="">
+                </picture>
+              </div>
+              <div class="sec02__desc">
+                <p>The Phobos and Senatus, governing Bitrium production, attempted to export it to Earth, only to see it vanish outside Mars and form a protective virtual atmosphere around the colony.</p>
+              </div>
+            </div>
+          </li>
+          <li class="sec02__item swiper-slide">
+            <div class="sec02__txt">
+              <div class="sec02__heading">
+                <h4 class="sec02__title">Mellow, <br class="only-mo">&#8216;Better than Earth&#8217;</h4>
+              </div>
+              <div class="sec02__img">
+                <picture>
+                  <source srcset="assets/images/main/sec02_img05.webp" type="image/webp">
+                  <img src="assets/images/main/sec02_img05.jpg" alt="">
+                </picture>
+              </div>
+              <div class="sec02__desc">
+                <p>As Earthlings migrate to Mars, uniting around the Mars Tower, they forge a future promising to outshine Earth, continually advancing and exploring new frontiers.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="sec03">
+      <div class="sec03_slide">
+        <div class="swiper sec03_swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="slide__cont">
+                <div class="slide__img">
+                  <picture>
+                    <source srcset="assets/images/main/sec03_img01.webp" type="image/webp">
+                    <img src="assets/images/main/sec03_img01.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="slide__txt short-txt">
+                  <p data-text="Fishing">Fishing</p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="slide__cont">
+                <div class="slide__img">
+                  <picture>
+                    <source srcset="assets/images/main/sec03_img02.webp" type="image/webp">
+                    <img src="assets/images/main/sec03_img02.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="slide__txt long-txt">
+                  <p data-text="Mars Expedition">Mars Expedition</p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="slide__cont">
+                <div class="slide__img">
+                  <picture>
+                    <source srcset="assets/images/main/sec03_img03.webp" type="image/webp">
+                    <img src="assets/images/main/sec03_img03.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="slide__txt mid-txt">
+                  <p data-text="Compbot">Compbot</p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="slide__cont">
+                <div class="slide__img">
+                  <picture>
+                    <source srcset="assets/images/main/sec03_img04.webp" type="image/webp">
+                    <img src="assets/images/main/sec03_img04.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="slide__txt long-txt">
+                  <p data-text="Dome&Housing">Dome&Housing</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-pagination only-mo"></div>
+          <div class="swiper-button-next slide_btn_next">
+            <picture>
+              <source srcset="assets/images/main/ico_arrow_next.webp" type="image/webp">
+              <img src="assets/images/main/ico_arrow_next.png" alt="">
+            </picture>
+          </div>
+          <div class="swiper-button-prev slide_btn_prev">
+            <picture>
+              <source srcset="assets/images/main/ico_arrow_prev.webp" type="image/webp">
+              <img src="assets/images/main/ico_arrow_prev.png" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__inner">
+            <ul class="footer__info">
+                <li>
+                  <p><strong>CEO</strong> Kevin Chang</p>
+                  <p><strong>BRN</strong> 837-88-02107</p>
+                  <p><strong>Mail-Order BRN</strong> 2022-Seoul Gangnam-02458</p>
+                </li>
+                <li>
+                  <p><strong>General Inquiry</strong> <a href="mailto:help@themarscorp.zendesk.com">help@themarscorp.zendesk.com</a></p>
+                  <p><strong>Business Inquiry</strong> <a href="mailto:partner@marscompany.co">partner@marscompany.co</a></p>
+                </li>
+                <li class="copyright">© 2024 The Mars Corp. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    </section>
+  </div>
+  <script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('[data-vbg]').youtube_background(); // 실행
+    });
+  </script>
+</body>
+<script>
+  	var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
+  	if (!isMobile) {
+  	gsap.registerPlugin(ScrollTrigger);
+
+  	const pageContainer = document.querySelector(".container");
+
+  	/* SMOOTH SCROLL */
+  	const scroller = new LocomotiveScroll({
+  	el: pageContainer,
+  	smooth: true,
+  	smoothMobile: true
+  	});
+
+  	scroller.on("scroll", ScrollTrigger.update);
+
+  	ScrollTrigger.scrollerProxy(pageContainer, {
+  	scrollTop(value) {
+  	return arguments.length ?
+  	scroller.scrollTo(value, 0, 0) :
+  	scroller.scroll.instance.scroll.y;
+  	},
+  	getBoundingClientRect() {
+  	return {
+  	left: 0,
+  	top: 0,
+  	width: window.innerWidth,
+  	height: window.innerHeight
+  	};
+  	},
+  	pinType: pageContainer.style.transform ? "transform" : "fixed"
+  	});
+
+  	////////////////////////////////////
+
+  	window.addEventListener("load", function () {
+  	let pinBoxes = document.querySelectorAll(".sec02__item");
+  	let pinWrap = document.querySelector(".sec02__list");
+  	let pinWrapWidth = pinWrap.offsetWidth;
+  	let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+
+
+  	// Pinning and horizontal scrolling
+  	gsap.to(".sec02__list", {
+  	scrollTrigger: {
+  	scroller: pageContainer, //locomotive-scroll
+  	scrub: true,
+  	trigger: ".sec02",
+  	pin: true,
+  	// anticipatePin: 1,
+  	start: "top top",
+  	end: pinWrapWidth
+  	},
+  	x: -horizontalScrollLength,
+  	ease: "none"
+  	});
+
+  	ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+  	ScrollTrigger.refresh();
+  	});
+
+  	}
+</script>
+
+</html>
